@@ -1,0 +1,138 @@
+HTML Head Section
+- title
+- link
+- meta
+- style
+- script
+
+						HTML Body Section
+- The <body> element defines body section.
+- It comprises of content to display in browser workspace.
+- HTML 4 uses "table" to design body content.
+- Tables lead to a situation called "Kiss-of-Death", which is uncertain about the content loading in page.
+- To avoid uncertainity in loading HTML 5 introduced new "Semantics" for designing body layout.
+- Semantic refers to element for specific purpose.
+- HTML officially have more than 100 semantics according to "MDN & WHATWG".
+- To create body layout HTML 5 provides following semantics
+
+		<header>
+		<footer>
+		<section>
+		<main>
+		<nav>
+		<aside>
+		<article>
+		<dialog>
+		<figure>
+		<figcaption>
+		etc..
+
+- The new semantics will make the page more SEO friendly and user firendly.
+- HTML provides several non-semantic elements, which you can use for various purpose.
+- How ever "Web-Accessibility" allows to convert a non-semantic into semantic.
+
+		<button> </button>					Semantic
+		<div aria-role="button"> </div>		
+
+- HTML non-semantics for body layout are
+
+		a) <div>
+		b) <span>
+
+- The element <div> refers to division, which is a container for related type of content.
+- The element <span> refers to contineous content, which can separate and highlight.
+   [span along with exisiting content]
+
+Ex:
+Layout.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 5px;
+        }
+        span {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Web Technology
+        <div>
+            Front End
+            <div>
+                HTML <br>
+                It is a <span>markup</span> language.
+            </div>
+            <div>
+               CSS <br>
+               It defines styles.
+            </div>
+        </div>
+        <div>
+            Back End
+            <div>
+                MongoDB <br>
+                It is a database.
+            </div>
+            <div>
+                Node JS <br>
+                It is server side script.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+- HTML <body> element provides various attributes
+
+1. bgcolor		: It sets background color for page.
+2. text			: It sets text color.
+
+FAQ: How colors are defined in HTML?
+Ans:  HTML supports 3 techniques
+
+		a) Color Name
+		b) Shade Name
+		c) Hexa Decimal Code
+
+	Color Name:	
+				
+			<body bgcolor="green"  text="white">
+
+	Shade Name:
+
+			<body bgcolor="lightgreen"  text="lightyellow">
+			<body bgcolor="goldenrod"  text="dark">
+
+	Hexa Decimal Code:
+
+			  a) 3 Chars Code with "#"
+			  b) 6 Chars Code with "#"
+
+				#RGB
+
+				R = 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+				G =	
+				B =
+
+				#f00			=> Red
+				#0f0			=> Green
+				#00f			=> Blue
+
+				#RRGGBB
+				#00ff00
+
+
+
+
+
+	

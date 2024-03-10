@@ -1,0 +1,444 @@
+Summary
+- heading
+- paragraph
+- blockquote
+
+Note: You can display content as screen-tip by using "title" attribute.
+
+Syntax:
+		<span title="Hyper Text Markup Language"> HTML </span>
+
+
+						      Pre-formatted Text
+
+- It can display your content exactly as it is defined in editor.
+- It keeps the formats for content defined in editor.
+- Pre-formatted text is enclosed in <pre> token.
+
+Syntax:
+	<pre>
+		... your content....
+	</pre>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            background-color: black;
+            color: white;
+            width: 350px;
+            padding: 10px;
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+      <h3>Sample C Program</h3>
+       <pre>
+        #include &lt;stdio.h&gt; 
+        main()
+        {
+            printf("Welcome to HTML");
+        }
+       </pre>
+</body>
+</html>
+
+						     Code Snippet
+- HTML 5 provides <code> element for configuring a code snippet.
+- It is mostly used for online coding platforms.
+- It also contains variables defined with <var> element and sample text defined with <samp> element.
+
+				<code>			code block
+				<var>			variable
+				<samp>			sample text
+				<big>			Large font size
+				<small>			Small font size
+
+Syntax:
+	  var x = 10;				// normal
+
+	  var <var>x</var> = 10;		// semantic
+
+	  <code>
+	       <pre>
+		  .... your code...
+		</pre>
+	  </code>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       code {
+        font-size: 17px;
+       }
+       var {
+         color:blue;
+       }
+       .return {
+         color:rgb(234, 44, 75);
+       }
+       section {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        column-gap: 50px;
+        font-family: Arial;
+       }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <h1>Hello World Program</h1>
+            <div>
+                <big>Input:</big> <small>args = []</small>
+            </div>
+            <div>
+                <samp>The function returned by createHelloWorld should always return "Hello World".</samp>
+            </div>
+        </div>
+        <div>
+            <h3> &lt/&gt Code </h3>
+            <code>
+            <pre>
+            <var>var</var> createHelloWorld = <var>function()</var> {
+        
+                <span class="return">return</span> function(...args) {
+                    console.log(args);
+                }
+            };
+            </pre>
+            </code>
+        </div>
+    </section>
+</body>
+</html>
+
+				          Data List with Terms & Definitions
+
+- List is defined by using <dl> element
+- Terms are defined with <dt> data term.
+- Definition is defined using <dd> data definition
+
+Syntax:
+	<dl>
+	    <dt> Term-1 </dt>
+	    <dd> Definition </dd>
+	    <dt> Term-2 </dt>
+	    <dd> Definition </dd>
+	</dl>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         dl {
+            width: 50%;
+         }
+         dt {
+            font-weight: bold;
+            background-color: black;
+            color:white;
+            padding: 2px;
+            margin-bottom: 5px;
+         }
+    </style>
+</head>
+<body>
+     <dl>
+        <dt>HTML</dt>
+        <dd>It is a markup language. </dd>
+        <dd>It is used for presentation.</dd>
+        <dt>CSS</dt>
+        <dt>Styles</dt>
+        <dd>It defines styles. </dd>
+        <dt>JavaScript</dt>
+        <dd>It is a language to manipulate DOM.</dd>
+        <dd>It handles validations.</dd>
+     </dl>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 2px gray;
+            border-radius: 10px;
+            width: 50%;
+        }
+        legend {
+            background-color: black;
+            color:white;
+            width: 150px;
+            padding: 2px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        dt {
+            background-color: gray;
+            color: white;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        dd {
+            background-color: lightgray;
+            color:black;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        dl {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+    </style>
+</head>
+<body>
+     <fieldset>
+          <legend>Personal Info</legend>
+          <dl>
+            <dt>First Name</dt>
+            <dd>some name</dd>
+            <dt>Last Name</dt>
+            <dd>some name</dd>
+            <dt>Fathers Name</dt>
+            <dd>some name</dd>
+          </dl>
+     </fieldset>
+     <fieldset>
+        <legend>Address Info</legend>
+        <dl>
+            <dt>City</dt>
+            <dd>some city</dd>
+            <dt>State</dt>
+            <dd>some state</dd>
+            <dt>Postal Code</dt>
+            <dd>some code</dd>
+        </dl>
+     </fieldset>
+</body>
+</html>
+
+CSS Sticky Position:
+- It keeps the element exactly as defined in document flow.
+- It sticks the elements to browser after specified position top, bottom, right or left.
+- Initially it scrolls with content and sticks to browser after specified position.
+
+Syntax:
+	dt {
+	    position:sticky;
+	    top:0px;
+	  }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dt {
+            width: 150px;
+            background-color: black;
+            color:white;
+            padding: 3px;
+            margin-bottom: 10px;
+            position: sticky;
+            top: 0px;
+        }
+        dd {
+            background-color: lightgray;
+            color:black;
+            padding: 3px;
+            width: 100px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h3>Shopper.</h3>
+        <dl>
+            <dt>Home</dt>
+            <dt>Electronics</dt>
+            <dd>Televisions</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Televisions</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Televisions</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Televisions</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Televisions</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Televisions</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dt>Footwear</dt>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Boots</dd>
+            <dt>Fashion</dt>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+            <dd>Kids</dd>
+            <dd>Women</dd>
+            <dd>Men</dd>
+        </dl>
+    </nav>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-image: url("images/inox.jpg");
+            height: 200px;
+            background-size: cover;
+        }
+        nav {
+            background-color: darkcyan;
+            color:white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            position: sticky;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <nav>
+        <div>Quick Booking</div>
+        <div>Movie</div>
+        <div>Cinema</div>
+        <div>Show Time</div>
+        <div>Date</div>
+        <div>Seats</div>
+        <div>Book</div>
+    </nav>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at, reiciendis hic quidem voluptatem repellendus odio voluptate quae atque possimus commodi rerum neque quas aliquam tempore perspiciatis qui iure deserunt.</p>
+
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Summary:
+<pre>
+<code>
+<samp>
+<big>
+<small>
+<var>
+<dl>
+<dt>
+<dd>
+
+

@@ -1,0 +1,271 @@
+Body Section Attributes
+1. bgcolor
+2. text
+	#RGB
+	#RRGGBB
+
+3. background: It sets a background image for page.
+
+	<body  background="images/banner.jpg">
+
+Note: You have control background image by using following CSS attributes
+
+	  	a) background-size			: width, height, contain, cover
+		b) background-repeat		: no-repeat, repeat, repeat-x, repeat-y
+		c) background-position		: top, center, bottom, left, right, pixels
+		d) background-attachment	: scroll , fixed
+
+Syntax:
+	      body {
+			background-size : cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+		   }
+		
+Note: Never use physical path for accessing resources. It is invalid on server.
+		
+		<body background="F:\images\banner.jpg">        // invalid
+	
+         Always copy the resource into your project folder and refer virtual path.
+
+		<body  background="images/banner.jpg">		// valid
+
+			\ back		=> physical path
+			/ forward		=> virtual path
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 5px;
+        }
+        span {
+            color:red;
+        }
+        body {
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position:center center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body background="images/banner.jpg" text="yellow">
+    <div>
+        Web Technology
+        <div>
+            Front End
+            <div>
+                HTML <br>
+                It is a <span>markup</span> language.
+            </div>
+            <div>
+               CSS <br>
+               It defines styles.
+            </div>
+        </div>
+        <div>
+            Back End
+            <div>
+                MongoDB <br>
+                It is a database.
+            </div>
+            <div>
+                Node JS <br>
+                It is server side script.
+            </div>
+        </div>
+    </div>
+
+    <div>
+        Web Technology
+        <div>
+            Front End
+            <div>
+                HTML <br>
+                It is a <span>markup</span> language.
+            </div>
+            <div>
+               CSS <br>
+               It defines styles.
+            </div>
+        </div>
+        <div>
+            Back End
+            <div>
+                MongoDB <br>
+                It is a database.
+            </div>
+            <div>
+                Node JS <br>
+                It is server side script.
+            </div>
+        </div>
+    </div>
+
+    <div>
+        Web Technology
+        <div>
+            Front End
+            <div>
+                HTML <br>
+                It is a <span>markup</span> language.
+            </div>
+            <div>
+               CSS <br>
+               It defines styles.
+            </div>
+        </div>
+        <div>
+            Back End
+            <div>
+                MongoDB <br>
+                It is a database.
+            </div>
+            <div>
+                Node JS <br>
+                It is server side script.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+4. align	 : It can align your content left, center, right or justify.
+
+
+		 <body  align="left | center | right | justify">
+
+		</body>
+
+5. leftmargin			]
+6. rightmargin			]	sets space between content border and page
+7. topmargin			]
+8. bottommargin		]
+
+   <body leftmargin="150"  rightmargin="150"  topmargin="50" bottommargin="50">
+
+Note: Make sure that your content have minimum 500px space on page.
+	  The standard page size is 1200px. And content must occupy min 500px.
+
+9. alink			: It sets color for active links in page.
+10. vlink			: It sets color for visited links in page.
+
+   <body  alink="red"  vlink="gray">
+
+	<a href="http://www.amazon.in"> Amazon </a>
+
+   </body>
+
+Setup Icons for Project:
+- Developers can use icons from various sources like bootstrap, font awesome, mui etc.
+- Download bootstrap icons for your project.
+
+1. Open terminal in your project
+
+2. Switch to command prompt
+
+3. Run the following command
+
+	      > npm  install  bootstrap-icons  --save
+
+4. It will create a new folder "node_modules" and add to project
+
+5. Bootstrap comprises of 100's of icons kept in a "css" file.
+
+6. You have to link the CSS file to your HTML page.
+
+<head>
+ <link rel="stylesheet"  href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+			./		to access file of same folder
+			../		to access a folder , one level back.
+			../../		two levels back
+
+7. Bootstrap icons are accesible with reference of class name.
+
+			.bi  bi-facebook
+			.bi  bi-twitter
+			.bi  bi-heart
+			.bi  bi-person
+			.bi  bi-house 
+			etc..
+
+		<div class="bi bi-facebook"> 
+
+		https://icons.getbootstrap.com/
+
+Semantics for Designing Page Layout:
+1. Header  : It is used to display content at top margin of page.
+		    Typically brand title, logo, navigation & shortcut buttons are ketp in header.
+
+Syntax:
+    <header>
+	.... your content...
+   </header>
+
+				www.getbootstrap.com  => themes
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header 
+        {
+            font-size: 20px;
+            font-family: Arial;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        span {
+            margin-right: 10px;
+        }
+        .brand-title {
+            font-weight: bold;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Home</span>
+                <span>Catalog</span>
+                <span>Shop</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+            </nav>
+        </div>
+        <div>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart4"></span>
+        </div>
+    </header>
+</body>
+</html>

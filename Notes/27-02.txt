@@ -1,0 +1,400 @@
+Summary
+- Header
+- Nav
+- Section
+- Main
+- Article
+
+						        Footer
+- Footer is a container used to display content at bottom margin of page.
+- Footer comprises of details like address, services, copyrights etc.
+
+Syntax:
+	<footer>
+		.... your content....
+	</footer>
+
+
+CSS Gird Display:
+- It can arrange content into rows and columns.
+- Grid can be configured by using CSS  "display:grid"
+- Grid can arrange rows & columns by using the attributes
+		
+	a) grid-template-rows
+	b) grid-template-columns
+
+- Grid columns are divided by "1200px"  or  "12fr"  (fractions).
+- "Px" is pixels, which is a fixed size.
+- "Fr" is fractions, which is responsive size.
+
+Syntax:
+	  container
+	   {
+	      display:grid;
+	      grid-template-columns: 600px  600px;  (6fr, 6fr)
+	   }
+
+						       Address
+- It is a container used to display contact details.
+- It keeps the website contact details SEO friendly.
+- You can define address location, phone numbers, email, skype, whatsapp contacts.
+
+Syntax:
+	<address>
+		.. your contact details...
+	</address>
+
+						    Aside
+- It is used to display content which is not present in the current context.
+- It redirects the user aside from current site to the sponsored sites.
+- It can be advertisements or social networks.
+
+Syntax:
+  <aside>
+	... your ads or social networks...
+  </aside>
+
+Ex: Shopper-Template
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            font-size: 20px;
+            font-family: Arial;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .brand-title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        header span {
+            padding-right: 20px;
+        }
+        article {
+            background-color: black;
+            color:white;
+            text-align: center;
+            font-size: 18px;
+            padding: 15px;
+            font-family: Arial;
+        }
+        .bi-lightning-fill {
+            color:gold;
+        }
+        section {
+            height: 100px;
+        }
+        footer {
+            background-color: black;
+            padding: 10px;
+            color:white;
+        }
+        .subscribe {
+            text-align: center;
+            padding-top: 50px;
+        }
+        .subscribe-title {
+            font-family: Arial;
+            font-size: 25px;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+        .email {
+            display: inline-block;
+            padding: 20px;
+            border:1px solid white;
+            width: 250px;
+            text-align: left;
+            background-color: rgba(154, 150, 150, 0.418);
+            margin-right: 20px;
+            font-family: Arial;
+            font-size: 16px;
+        }
+        .btn-subscribe {
+            display: inline-block;
+            padding: 20px;
+            border:1px solid white;
+            width: 100px;
+            background-color: gray;
+            font-family: Arial;
+            font-size: 16px;
+        }
+        .services {
+            font-family: Arial;
+            font-size: 16px;
+            padding: 10px;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+        }
+        .service-footer-brand {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .service-title {
+            font-weight: bold;
+        }
+        .service-title~span {
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        address {
+            margin-top: 10px;
+        }
+        address span {
+            display: block;
+            margin-bottom: 10px;
+        }
+        aside span {
+            display: inline-block;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+           <nav>
+            <span>Home</span>
+            <span>Catalog</span>
+            <span>Shop</span>
+            <span>Pages</span>
+            <span>Blog</span>
+            <span>Docs</span>
+           </nav>
+        </div>
+        <div>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart2"></span>
+        </div>
+    </header>
+    <article>
+        <span class="bi bi-lightning-fill"></span>
+        <span>  HAPPY HOLIDAY DEALS ON EVERYTHING </span>
+        <span class="bi bi-lightning-fill"></span>
+    </article>
+    <section>
+
+    </section>
+    <footer>
+        <div class="subscribe">
+            <span class="subscribe-title">Want style Ideas and Treats?</span>
+            <div>
+                <span class="email">Enter Email*</span> <span class="btn-subscribe">Subscribe</span>
+            </div>
+        </div>
+        <div class="services">
+            <div>
+                <span class="service-footer-brand">Shopper.</span>
+                <aside>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-linkedin"></span>
+                </aside>
+            </div>
+            <div>
+                <span class="service-title">SUPPORT</span>
+                <span>Contact Us</span>
+                <span>FAQs</span>
+                <span>Size Guide</span>
+                <span>Shipping & Returns</span>
+            </div>
+            <div>
+                <span class="service-title">SHOP</span>
+                <span>Men's Shopping</span>
+                <span>Women's Shopping</span>
+                <span>Kids' Shopping</span>
+                <span>Discounts</span>
+            </div>
+            <div>
+                <span class="service-title">COMPANY</span>
+                <span>Our Story</span>
+                <span>Careers</span>
+                <span>Terms & Conditions</span>
+                <span>Privacy & Cookie policy</span>
+            </div>
+            <div>
+                <span class="service-title">CONTACT</span>
+                <address>
+                    <span>1-202-555-0105</span>
+                    <span>1-202-555-0106</span>
+                    <span>help@shopper.com</span>
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+CSS Child & Siblings:
+
+	parent  child {	 }			It refers to all elements with in parent.
+	
+	element+adjacent { }		It refers to first element after the parent.
+
+	element~siblings { }		It refers to all elements after the parent.
+
+	
+Syntax:
+	<nav>						nav  span {	
+	   <span> </span>		=>
+	   <span> </span>
+	</nav>						}
+
+	
+	<nav> </nav>					nav+span {
+	<span></span>				}
+
+	<nav></nav>					nav~span {
+	<span></span>	
+	<span></span>				}
+
+Ex: Amazon-Footer
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .back {
+            font-size: 18px;
+            background-color: slategrey;
+            color:white;
+            text-align: center;
+            padding: 10px;
+        }
+        footer {
+            background-color: black;
+            color:white;
+            font-family: Arial;
+            font-size: 18px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .service-title {
+            font-weight: bold;
+        }
+        .service-title~span {
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        Back to top
+    </div>
+    <footer>
+        <div>
+            <span class="service-title"> Get to Know Us</span>
+            <span>About Us</span>
+            <span>Careers</span>
+            <span>Press Releases</span>
+            <span>Amazon Science</span>
+        </div>
+        <div>
+            <span class="service-title">Connect with Us</span>
+            <span>Facebook</span>
+            <span>Twitter</span>
+            <span>Instagram</span>
+        </div>
+        <div>
+           <span class="service-title"> Make Money with Us</span>
+            <span>Sell on Amazon</span>
+            <span>Sell under Amazon Accelerator</span>
+            <span>Protect and Build Your Brand</span>
+            <span>Amazon Global Selling</span>
+            <span>Become an Affiliate</span>
+            <span>    Fulfilment by Amazon</span>
+            <span>Advertise Your Products</span>
+            <span>Amazon Pay on Merchants</span>
+        </div>
+        <div>
+            <span class="service-title">Let Us Help You</span>
+            <span>COVID-19 and Amazon</span>
+            <span>Your Account</span>
+            <span>Returns Centre</span>
+            <span>100% Purchase Protection</span>
+            <span>Amazon App Download</span>
+            <span>Help</span>
+        </div>
+    </footer>
+</body>
+</html>
+
+Ex: Flipkart Footer
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        footer {
+            background-color: black;
+            color:white;
+            font-size: 20px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            height: 400px;
+        }
+        .left-panel {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .right-panel {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            border-left: 1px solid white;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="left-panel">
+            <div>Col-1</div>
+            <div>Col-2</div>
+            <div>Col-3</div>
+            <div>Col-4</div>
+        </div>
+        <div class="right-panel">
+            <div>Col-1</div>
+            <div>Col-2</div>
+        </div>
+    </footer>
+</body>
+</html>
+
+Body Layout Semantics:
+- header
+- footer
+- section
+- nav
+- article
+- aside
+- address
+- main

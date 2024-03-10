@@ -1,0 +1,236 @@
+Summary
+- Dialog
+- Details & Summary
+- Fieldset & Legend
+
+					        Headings in HTML
+- Headings are defined by using <hn> element.
+- "n" refers to level number from 1 to 6.
+
+Syntax:
+	<h1> Your Text </h1>
+	............
+	...........
+	<h6> Your Text </h6>
+
+- Headings are used to keep your topics SEO friendly.
+
+FAQ's:
+1. Why to use heading element for text, if you can define similar effects without heading element?
+A. To keep the content SEO friendly.
+     Web spiders & crawlers can summarize the topics in page using heading elements,
+     hence it is good to define headings using heading element.
+
+2. Can we format heading element?
+A. Yes. 
+	
+	h1 {
+		font-family:Arial;
+		font-size: 40px;
+	        color:blue;
+	   }
+
+3. What are the default styles defined for heading element?
+A.  display, font-size, font-weight
+
+4. How to to remove the default styles defined for heading element?
+A. By using CSS inheritance value called "unset".
+
+Syntax:
+		h1 {						h1 {
+			all :unset;				     font-size: unset;
+		}						     font-wieght: unset;
+								 }
+
+Note:
+- Don't use headings to highlight any word or sentence in document.
+- Don't use too many headings in a page. It may SPAM your page.
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         h1 {
+            all : unset;
+         }
+    </style>
+</head>
+<body>
+    <h1>Web Technologies</h1> Welcome
+    <h2>Front End</h2>
+    <h3>HTML</h3>
+    It is a <h4> markup </h4> language.
+    <h3>CSS</h3>
+    It defines styles.
+    <h3>JavaScript</h3>
+    It is a language.
+</body>
+</html>
+
+					     Paragraphs & Blockquotes
+
+- A paragraph is defined with <p> element.
+- Blockquote is defines with <blockquote>, which is similar to pargraph but have padding left & right.
+- Blockquotes are used to summarize your topic and make it SEO friendly.
+
+Syntax:
+	<p> ....your text.... </p>
+
+	<blockquote> 
+	  .... your text....
+	</blockquote>
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        blockquote {
+            padding-left: 200px;
+            padding-right: 200px;
+            font-style: italic;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">THE HINDU</h1>
+    <div>
+        <blockquote> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati doloribus unde praesentium quibusdam blanditiis repudiandae similique error voluptatum? Magni amet veritatis perferendis non eius tempora assumenda numquam aliquam dicta sint. </blockquote>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati doloribus unde praesentium quibusdam blanditiis repudiandae similique error voluptatum? Magni amet veritatis perferendis non eius tempora assumenda numquam aliquam dicta sint. </p>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati doloribus unde praesentium quibusdam blanditiis repudiandae similique error voluptatum? Magni amet veritatis perferendis non eius tempora assumenda numquam aliquam dicta sint. </p>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati doloribus unde praesentium quibusdam blanditiis repudiandae similique error voluptatum? Magni amet veritatis perferendis non eius tempora assumenda numquam aliquam dicta sint. </p>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati doloribus unde praesentium quibusdam blanditiis repudiandae similique error voluptatum? Magni amet veritatis perferendis non eius tempora assumenda numquam aliquam dicta sint. </p>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati doloribus unde praesentium quibusdam blanditiis repudiandae similique error voluptatum? Magni amet veritatis perferendis non eius tempora assumenda numquam aliquam dicta sint. </p>
+    </div>
+</body>
+</html>
+
+					  Body Entities & Semantics 
+
+1.  Linebreak				<br>
+
+2.  Blankspace			&nbsp;  [Non-Breakable Space]
+
+FAQ's:
+1. What is difference between <br> & <br /> ?
+A. There is no <br /> in HTML.
+     <br /> is used to represent a void element as self ending element.
+     It is just for supressing warnings from various editors.
+
+2. How to set first line indent for paragraph?
+A. By using CSS attribute  "text-indent"
+
+Syntax:
+	  p {
+		text-indent: 100px;
+	  }
+
+3. How to set Dropcap for paragraph?
+A. By accessing first letter of paragraph with CSS "first-letter" class.
+
+Syntax:
+		p::first-letter 
+		{
+		}
+ 
+     Dropcap can be configured for first letter by using the styles like
+		a) font-size
+		b) font-family
+		c) float : left
+
+Syntax:
+	blockquote :: first-letter {
+
+		  font-size : 40px;
+		  font-family: Arial;
+		  float: left;
+
+	}
+
+4. How to set spacing between lines, words & chars?
+A. By using the CSS attributes
+
+		letter-spacing
+		word-spacing
+		line-height
+Syntax:
+	p {
+	    letter-spacing: 2px
+	    word-spacing: 10px;
+	    line-height: 40px;
+	}
+
+5. How to design scrollable content in page?
+A. By using CSS "overflow" attribute. 
+
+Syntax:
+	p {
+		width : 250px;
+		height: 150px;
+		border: 1px solid black;
+		overflow: auto;
+	 }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            padding: 15px;
+            border:1px solid black;
+            width: 250px;
+            height: 150px;
+            text-align: justify;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+ 
+   <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt modi odit asperiores aliquam deleniti veniam culpa vel cupiditate, quibusdam maxime quod architecto dignissimos, nemo maiores sequi, officiis eaque neque omnis?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt modi odit asperiores aliquam deleniti veniam culpa vel cupiditate, quibusdam maxime quod architecto dignissimos, nemo maiores sequi, officiis eaque neque omnis?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt modi odit asperiores aliquam deleniti veniam culpa vel cupiditate, quibusdam maxime quod architecto dignissimos, nemo maiores sequi, officiis eaque neque omnis?
+   </p>
+
+</body>
+</html>
+
+6. How to display overflowing content with "ellipsis" ?
+A. By using CSS attributes
+		
+		a) white-space
+		b) text-overflow
+		c) overflow
+
+Syntax:
+	p {
+	     border: 1px solid black;
+	     width: 300px;
+	     white-space: nowrap;
+	     overflow:hidden;
+	     text-overflow: ellipsis;
+	}
+
+
+
+
+
+
+
+
+

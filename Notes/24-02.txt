@@ -1,0 +1,279 @@
+	    Nav
+- It is used for navigation area.
+- It is a container that shows the services provided or the features accessible to users.
+- Usually nav allows navigation within application.
+- It comprises items which user can select to view.
+
+Syntax:
+	<nav>
+		<span> Item-1 </span>
+		<span> Item-2 </span>
+	</nav>
+
+CSS Attributes for Text Styles:
+
+		font-size			: It sets the char size.
+		font-family		: It defines the font face [Arial, Script, Tahoma etc..]
+		font-weight		: It sets bold
+		font-style			: It sets italics
+				
+		text-align			: It sets alignment left, center, right, justify
+		color			: It sets char color
+		
+Syntax:
+		{
+		  font-size : 20px;
+		  font-family: Arial;
+		  font-weight: bold;
+		  font-style: italic;
+		  text-align: center;
+		  color: red;
+		}
+
+CSS Margins & Padding:
+
+		margin			: It sets margin all directions
+		margin-left
+		margin-right
+		margin-top
+		margin-bottom
+
+		padding			: It sets padding all directions
+		padding-left
+		padding-right
+		padding-top
+		padding-bottom
+
+Note: 
+- Margin is distance between border and page.
+- Padding is distance between border and content inside border.
+
+
+CSS Borders:
+		
+		border		: It sets size, style & color
+		border-left
+		border-right
+		border-top
+		border-bottom
+
+Note:
+	size		=> border thickness
+	style		=> solid, double, dotted, dashed, groove etc..
+	color	=> border color
+
+Syntax:
+	    {
+	       border: 2px solid green;
+	    }
+
+
+CSS Border Radius:
+	
+	  border-radius	: It sets ronded borders all directions
+	  border-top-right-radius
+	  border-top-left-radius
+	  border-bottom-right-radius
+	  border-bottom-left-radius
+
+Syntax:
+	  {
+	    border-top-right-radius : 50px;
+	  }
+
+CSS Display :
+
+	display:none			: It hides element
+	display:inline			: It will display side by side [without size & effects]
+	display:inline-block		: It will display side by side with size & effects
+	display:block			: It will display one below another
+	display:flex			: It can display inline or block [row or column]
+	flex-direction:row		: Default flex direction is row.
+	flex-direction:column
+	justify-content			: center, space-between, space-around, space-evenly
+						  [Horizontally if direction is row, vertically if direction 								  column]
+	
+
+							Article
+- It is a container used to display latest trends on your site.
+
+Syntax:
+	<article>
+	    ... your offers... latest trends... 
+	</article>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            font-size: 20px;
+            font-family: Arial;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .brand-title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        header span {
+            padding-right: 20px;
+        }
+        article {
+            background-color: black;
+            color:white;
+            text-align: center;
+            font-size: 18px;
+            padding: 15px;
+            font-family: Arial;
+        }
+        .bi-lightning-fill {
+            color:gold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+           <nav>
+            <span>Home</span>
+            <span>Catalog</span>
+            <span>Shop</span>
+            <span>Pages</span>
+            <span>Blog</span>
+            <span>Docs</span>
+           </nav>
+        </div>
+        <div>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart2"></span>
+        </div>
+    </header>
+    <article>
+        <span class="bi bi-lightning-fill"></span>
+        <span>  HAPPY HOLIDAY DEALS ON EVERYTHING </span>
+        <span class="bi bi-lightning-fill"></span>
+    </article>
+</body>
+</html>
+
+
+Ex: Landkit
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landkit</title>
+    <style>
+        header {
+            font-size: 20px;
+            font-family: Arial;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .brand-title {
+            font-size: 25px;
+            font-weight: bold;
+            color: #00a;
+        }
+        header span {
+            padding-right: 20px;
+        }
+        .buy {
+            background-color: #00b;
+            color:white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Landkit.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Landings</span>
+                <span>Pages</span>
+                <span>Account</span>
+                <span>Documentation</span>
+            </nav>
+        </div>
+        <div>
+            <span class="buy">Buy now</span>
+        </div>
+    </header>
+</body>
+</html>
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+         header {
+             font-size: 18px;
+             font-family: Arial;
+             padding: 20px;
+             display: flex;
+             justify-content: space-between;
+             border: 1px solid black;
+             background-color: maroon;
+             color:white;
+             border-radius: 10px;
+         }
+         header span {
+            padding-right: 10px;
+         }
+         .brand-title {
+            font-size: 25px;
+            font-weight: bold;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">SELL.</span>
+        </div>
+        <div>
+           <nav>
+            <span> HOME <span class="bi bi-chevron-down"></span> </span>
+            <span> SHOP <span class="bi bi-chevron-down"></span> </span>
+            <span> TEMPLATE <span class="bi bi-chevron-down"></span> </span>
+            <span> CONTACT <span class="bi bi-chevron-down"></span> </span>
+            <span> DOCS <span class="bi bi-chevron-down"></span> </span>
+           </nav>
+        </div>
+        <div>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person-circle"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+    </header>
+</body>
+</html>
+
+
+
+

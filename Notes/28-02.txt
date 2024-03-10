@@ -1,0 +1,476 @@
+Semantics
+- header
+- footer
+- section
+- article
+- aside
+- address
+- nav
+- main
+
+CSS Background Image:
+
+		.container
+		{
+		  background-image: url("path");
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  background-attachment:fixed;
+		}
+
+CSS Text Shadow :
+
+		{
+		 text-shadow: horizontal  vertical   blur  color;
+		}
+
+		div {
+		  text-shadow: 5px 4px 5px red;
+		}
+
+CSS Center Screen for Content
+
+		{
+		  height: according to requirement;
+		  display:flex;
+		  justify-content:center;
+		  align-items:center;
+		}
+
+ Note: You must keep all your content in one container. [parent must be only one]
+
+Ex: Shopper-Template
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            font-size: 20px;
+            font-family: Arial;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .brand-title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        header span {
+            padding-right: 20px;
+        }
+        article {
+            background-color: black;
+            color:white;
+            text-align: center;
+            font-size: 18px;
+            padding: 15px;
+            font-family: Arial;
+        }
+        .bi-lightning-fill {
+            color:gold;
+        }
+        
+        footer {
+            background-color: black;
+            padding: 10px;
+            color:white;
+        }
+        .subscribe {
+            text-align: center;
+            padding-top: 50px;
+        }
+        .subscribe-title {
+            font-family: Arial;
+            font-size: 25px;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+        .email {
+            display: inline-block;
+            padding: 20px;
+            border:1px solid white;
+            width: 250px;
+            text-align: left;
+            background-color: rgba(154, 150, 150, 0.418);
+            margin-right: 20px;
+            font-family: Arial;
+            font-size: 16px;
+        }
+        .btn-subscribe {
+            display: inline-block;
+            padding: 20px;
+            border:1px solid white;
+            width: 100px;
+            background-color: gray;
+            font-family: Arial;
+            font-size: 16px;
+        }
+        .services {
+            font-family: Arial;
+            font-size: 16px;
+            padding: 10px;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+        }
+        .service-footer-brand {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .service-title {
+            font-weight: bold;
+        }
+        .service-title~span {
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        address {
+            margin-top: 10px;
+        }
+        address span {
+            display: block;
+            margin-bottom: 10px;
+        }
+        aside span {
+            display: inline-block;
+            padding-right: 10px;
+        }
+        main {
+            height: 450px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .women-fashion {
+            background-image: url("images/women-fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .men-fashion {
+            background-image: url("images/men-fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .kids-fashion {
+            background-image: url("images/kids-fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .btn-shop {
+            display: inline-block;
+            width: 150px;
+            padding: 15px;
+            background-color: white;
+            color:black;
+            font-size: 20px;
+            font-family: Arial;
+            text-align: center;
+        }
+        .main-title {
+            font-family: Arial;
+            font-size: 40px;
+            font-weight: bold;
+            color:white;
+            text-shadow: 2px 2px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+           <nav>
+            <span>Home</span>
+            <span>Catalog</span>
+            <span>Shop</span>
+            <span>Pages</span>
+            <span>Blog</span>
+            <span>Docs</span>
+           </nav>
+        </div>
+        <div>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart2"></span>
+        </div>
+    </header>
+    <article>
+        <span class="bi bi-lightning-fill"></span>
+        <span>  HAPPY HOLIDAY DEALS ON EVERYTHING </span>
+        <span class="bi bi-lightning-fill"></span>
+    </article>
+    <section>
+        <main>
+            <div class="women-fashion">
+                <div>
+                    <span class="main-title">Women</span>
+                </div>
+                <div>
+                    <span class="btn-shop">
+                        Shop Women <span class="bi bi-arrow-right"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="men-fashion">
+                <div>
+                    <span class="main-title">Men</span>
+                </div>
+                <div>
+                    <span class="btn-shop">
+                        Shop Men <span class="bi bi-arrow-right"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="kids-fashion">
+                <div>
+                    <span class="main-title">Kids</span>
+                </div>
+                <div>
+                    <span class="btn-shop">
+                        Shop Kids <span class="bi bi-arrow-right"></span>
+                    </span>
+                </div>
+            </div>
+        </main>
+    </section>
+    <footer>
+        <div class="subscribe">
+            <span class="subscribe-title">Want style Ideas and Treats?</span>
+            <div>
+                <span class="email">Enter Email*</span> <span class="btn-subscribe">Subscribe</span>
+            </div>
+        </div>
+        <div class="services">
+            <div>
+                <span class="service-footer-brand">Shopper.</span>
+                <aside>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-linkedin"></span>
+                </aside>
+            </div>
+            <div>
+                <span class="service-title">SUPPORT</span>
+                <span>Contact Us</span>
+                <span>FAQs</span>
+                <span>Size Guide</span>
+                <span>Shipping & Returns</span>
+            </div>
+            <div>
+                <span class="service-title">SHOP</span>
+                <span>Men's Shopping</span>
+                <span>Women's Shopping</span>
+                <span>Kids' Shopping</span>
+                <span>Discounts</span>
+            </div>
+            <div>
+                <span class="service-title">COMPANY</span>
+                <span>Our Story</span>
+                <span>Careers</span>
+                <span>Terms & Conditions</span>
+                <span>Privacy & Cookie policy</span>
+            </div>
+            <div>
+                <span class="service-title">CONTACT</span>
+                <address>
+                    <span>1-202-555-0105</span>
+                    <span>1-202-555-0106</span>
+                    <span>help@shopper.com</span>
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+							    Dialog
+
+- A dialog is used to pop-up content in page.
+- It is hidden in page.
+- You have to display by using "open" attribute.
+- Interactions with popup technique are designed using dialog.
+
+Syntax:
+	<dialog open>
+		....your content....
+	</dialog>
+
+Ex:
+    <body>
+	<dialog open>
+		... contact help desk ....
+	</dialog>
+  </body>
+
+						     Details & Summary
+
+- Details is a container that allows to expand or collapse content dynamically.
+- Summary is a caption for Details
+
+Syntax:
+	<details>
+		<summary> Title </summary>
+		....your content....
+	</details>
+
+- The default state of details is collapsed. You can set it expanded by using "open" attribute.
+
+Syntax:
+	<details  open>
+		<summary> Title </summary>
+	</details>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <details open>
+          <summary>What is Netflix?</summary>
+          <div>
+            Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+          </div>
+    </details>
+    <details>
+        <summary>How much does Netflix cost?</summary>
+        <div>
+            Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+        </div>
+    </details>
+</body>
+</html>
+
+						      Fieldset & Legend
+
+- Fieldset is a frame to keep related content together.
+- Legend is used as caption for fieldset.
+
+Syntax:
+	<fieldset>
+		<legend> Title </legend>
+		.... your content.....
+	</fieldset>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            margin-bottom: 40px;
+            box-shadow: 4px 4px 2px gray;
+            background-image: url("images/kids-fashion.jpg");
+            background-size: cover;
+            height: 300px;
+        }
+        legend {
+            text-align: center;
+            background-color: black;
+            color:white;
+            padding: 5px;
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px gray;
+        }
+    </style>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>Personal Info.</legend>
+        <div>Name</div>
+        <div>City</div>
+        <div>State</div>
+        <div>Contact</div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Education Qualification</legend>
+        <div>School</div>
+        <div>College</div>
+        <div>Marks</div>
+    </fieldset>
+
+</body>
+</html>
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            text-align: center;
+            width: 200px;
+        }
+        legend {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .btn-signup {
+            border:1px solid black;
+            background-color: white;
+            color:black;
+            padding: 5px;
+            text-align: center;
+            width: 200px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+         <legend> New to Amazon? </legend>
+         <div class="btn-signup">
+            Create your Amazon account
+         </div>
+    </fieldset>
+</body>
+</html>
+
+Semantics:
+- Dialog
+- Details & Summary
+- Fieldset & Legend
