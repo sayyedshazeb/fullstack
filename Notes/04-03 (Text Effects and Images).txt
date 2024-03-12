@@ -209,4 +209,4 @@ GIF
 - Not HD
 - Less Pixels
 - Memory same as JPG.
-- Good for logos, bullets, buttons etc.
+- Good for logos, bullets, buttons ecsectra.
