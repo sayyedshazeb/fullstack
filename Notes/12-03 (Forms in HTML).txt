@@ -1,0 +1,84 @@
+Forms in HTML
+
+
+
+                            Forms in HTML
+
+- Form provides an UI from where user can interact with your application.
+- It enable CRUD operations.
+       
+        C        Create
+        R        Read
+        U        Update
+        D        Delete
+
+- Form UI allows to view the data, input, edit and delete the data from any source.
+- It also provides UI for filtering, sorting and manipulating data.
+- Form UI comprises of various elements for interaction, which includes
+    TextBox,
+    CheckBox,
+    Radio Button
+    List Box
+    Dropdown
+    Date Picker
+    Buttons
+    etc..
+
+The "Form" container:
+- HTML provides <form> element.
+- It is used to define a container with set of elements.
+- Form container can access data from elements and submit to server.
+
+Syntax:
+        <form>
+            .... form elements ....
+        </form>
+
+Form Attributes:
+
+1. name            : It defines a reference name for "form".
+2. id                : It defines a unique identification for form, which can be used by
+                  css & javascript.
+3. class            : It refers to CSS class name.
+4. method        : It defines the action performed by form.
+                  Form have 2 methods
+                    a) GET
+                    b) POST
+
+Form Methods:
+- Methods define actions to be performed by element.
+- Form have 2 basic methods
+    a) GET
+    b) POST
+- Form uses GET method for fetching data from server.
+- Form uses POST method for submitting data to server.
+- If method is not defined, then the default method is "GET".
+
+Syntax:
+    <form  method="GET | POST">
+
+FAQ: Can we submit data to server on GET request?
+Ans:  Yes. But not recommended.
+
+GET
+- It submits the data as "Query String".
+- Query String is appended into URL and displayed in address bar of browser.
+- Everyone can view the data.
+- It is not safe.
+- It is easy to hack your data.
+- It can be bookmarked.
+- It is saved in browser logs. [history]
+- You can't submit complex data like binary.
+- You can submit max 2048 chars.
+- It can cache the data and save the round-trips.
+
+POST
+- It submits the data as "Form Body".
+- It is not visible to all users.
+- It is safe when compared to GET.
+- It is hard to hack your data.
+- It is not saved in browser logs.
+- It can't be bookmarked.
+- It can submit complex data.
+- There is no limit for data.
+- It can't cache your data.

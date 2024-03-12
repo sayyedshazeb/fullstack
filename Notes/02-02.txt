@@ -1,0 +1,447 @@
+Ordered & Unordered List
+
+- Ordered list sets auto numbering for a list of items.
+- List is defined with <ol> element.
+- Items in list are defined with <li> element.
+
+Syntax:
+    <ol>
+      <li> Item-1 </li>
+      <li> Item-2 </li>
+    </ol>
+
+- You can change the numbering style using "type" attribute.
+
+Syntax:
+     <ol type="1, a, A, i, I">
+
+    </ol>
+
+- You can configure the startup by using "start" attribute. It refers to level number to start with.
+
+Syntax:
+    <ol type="1"  start="101">
+    <ol type="A"  start="5">
+
+- HTML 5 provides "reversed" attribute, which set reverse numbering for items.
+
+Syntax:    
+    <ol  type="1"  reversed>
+    <ol  type="A"  reversed>
+
+- You can configure multi level numbering style. A child list must be inside <li> element.
+
+Syntax:
+    <ol type="1">
+        <li> Parent
+            <ol type="a">
+               <li> Child </li>
+            </ol>
+        </li>
+    </ol>
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Web Technologies</h2>
+    <ol type="I">
+        <li>Front End Tools
+            <ol type="1">
+                <li>HTML
+                    <ol type="a">
+                        <li>Normal Elements</li>
+                        <li>Void Elements</li>
+                    </ol>
+                </li>
+                <li>CSS</li>
+           </ol>
+        </li>
+       <li>Back End Tools
+            <ol type="1">
+                <li>MongoDB</li>
+                <li>Node JS</li>
+            </ol>
+       </li>
+    </ol>
+</body>
+</html>
+
+FAQ's:
+1. How to remove numbering for list items?
+A. By using css attribute "list-style" set to "none"
+
+Syntax:
+    ol {
+        list-style : none;
+     }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      nav  ol {
+            list-style: none;
+        }
+      nav  li {
+            width: 70px;
+            padding: 5px;
+            background-color: darkcyan;
+            color:white;    
+            margin-bottom: 10px;
+        }
+        footer ol {
+            list-style: none;
+        }
+        footer li {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ol>
+            <li>Home</li>
+            <li>About</li>
+            <li>Shop</li>
+            <li>Pages</li>
+            <li>Blog</li>
+        </ol>
+    </nav>
+    <footer>
+        <ol>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+        </ol>
+    </footer>
+</body>
+</html>
+
+2. How to design scrollable list?
+A. By using CSS overflow. It also depends on list items and height of container.
+
+Syntax:
+    ol {
+        width:200px;
+        padding:5px;
+        border:1px solid gray;
+        height:50px;
+        overflow:auto;
+        list-style:none;
+    }
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol {
+            list-style: none;
+            width: 150px;
+            padding: 5px;
+            border:1px solid gray;
+            height: 50px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ol>
+            <li>Home</li>
+            <li>About</li>
+            <li>Shop</li>
+            <li>Pages</li>
+            <li>Blog</li>
+        </ol>
+    </nav>
+</body>
+</html>
+
+3. How to display list side by side?
+A. You can use
+    a) display : flex
+    b) display : inline
+
+Note:  
+    - Flex is used for container  that have items.
+    - Inline is used for items individually.
+
+Syntax:
+     ol {
+        display: flex;
+     }
+
+    li {
+       display:inline;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol {
+            list-style: none;
+           
+        }
+        li {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ol>
+            <li>Home</li>
+            <li>About</li>
+            <li>Shop</li>
+            <li>Pages</li>
+            <li>Blog</li>
+        </ol>
+    </nav>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol {
+            list-style: none;
+        }
+        li {
+            width: 200px;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+       
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav>
+        <ol>
+            <li> <span>Home</span> <span class="bi bi-house"></span> </li>
+            <li> <span>Notification</span> <span class="bi bi-bell"></span> </li>
+            <li> <span>Singin</span> <span class="bi bi-person-fill"></span> </li>
+        </ol>
+    </nav>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol {
+            list-style: none;
+        }
+        li {
+            width: 200px;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        li:hover {
+            background-color: yellow;
+            color:black;
+            cursor:grab;
+        }
+       
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav>
+        <ol>
+            <li> <span>Home</span> <span class="bi bi-house"></span> </li>
+            <li> <span>Notification</span> <span class="bi bi-bell"></span> </li>
+            <li> <span>Singin</span> <span class="bi bi-person-fill"></span> </li>
+            <li> <span>Cart</span> <span class="bi bi-cart4"></span> </li>
+        </ol>
+    </nav>
+</body>
+</html>
+
+4. How to display list in multiple columns?
+A. By using CSS attributes
+    a) display : grid
+    b) columns
+
+Syntax:
+    ol {
+        display:grid;                        =>      a) Item-1        b) Item-2
+        grid-template-columns:6fr 6fr;              c) Item-3        d) Item-4
+    }
+
+
+    ol {                                =>   a) Item-1            c)Item-3
+        columns:2;                            b) Item-2            d)Item-4
+    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child-list {
+            margin-top: 10px;
+            columns: 2;
+        }
+        .child-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ol type="1">
+        <li> ____________ elements will not have end token.
+       
+            <ol type="a" class="child-list">
+                 <li>Normal Elements</li>
+                 <li>Void Elements</li>
+                 <li>Raw Text Elements</li>
+                 <li>RC Data Elements</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>
+
+
+Unordered List:
+- It sets a bulleted list.
+- It adds a symbol for every item
+- List is defined with <ul>  & items are defined with  <li>
+- It have "type" with values "circle, disc & square".
+
+Syntax:
+    <ul type="square">
+       <li> Item-1 </li>
+       <li> Item-2 </li>
+    </ul>
+
+- You can define nested list with combination of <ul> & <ol>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+    </style>
+</head>
+<body>
+    <ul type="square">
+        <li>HTML
+            <ol>
+                <li>Normal Elements
+                    <ul type="disc">
+                        <li>Header</li>
+                        <li>Nav</li>
+                    </ul>
+                </li>
+                <li>Void Elements</li>
+            </ol>
+        </li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+    </ul>
+</body>
+</html>
+
+FAQ's:
+1. How to define a custom symbol?
+A. You can apply bootstrap Icons. or
+     You can create a custom symbol and configure for <ul> by using the CSS attribute.
+
+        "list-style-image: url(path)"
+
+Ex: Bootstrap Icons
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li  class="bi bi-tag-fill"> HDFC Offer 20% </li>
+        <li  class="bi bi-tag-fill"> SBI Offer 5% </li>
+        <li  class="bi bi-tag-fill"> EMI Offers </li>
+    </ul>
+</body>
+</html>
+
+Ex: Custom Image
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        ul {
+            list-style: none;
+            list-style-image: url("images/bullet.jpg");
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li> HDFC Offer 20% </li>
+        <li> SBI Offer 5% </li>
+        <li> EMI Offers </li>
+    </ul>
+</body>
+</html>

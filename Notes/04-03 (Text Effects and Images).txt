@@ -1,0 +1,212 @@
+Text Effects and Images
+
+Text Formatting in HTML
+
+1. Font
+ - The <font> element allows to change the face, size and color.
+ 
+    a) Face        :  It defines font family name
+    b) Size        :  It defines size in 1 to 7 levels.
+    c) Color        :  It refers to name, shade name and hexa code
+
+Syntax:
+    <font  face="Arial"  size="7"  color="red">   Your Text </font>
+
+Note: The modern Web will not recommend to use <font> tag of HTML.
+      Always define font using styles [CSS].
+
+FAQ: What are Web Safe fonts?
+Ans :  Web Safe fonts will transform content into the native of client browser or device.           The web safe fonts are:
+       
+        a) Serif
+        b) Sans Serif
+        c) Monospace
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <font size="7" face="Algerian" color="red">Welcome </font>
+</body>
+</html>
+
+FAQ: What is the default size?
+Ans : 3. Font size is defined in level numbers
+
+        1. extra-small
+        2. small
+        3. normal
+        4. large
+        5. x-large
+        6. xx-large
+        7. xxx-large
+
+2. Font Styles & Effects
+
+        Bold                <b> <strong>
+        Italic                <i>  <em>
+        Underline        <u> <ins>
+        Strikeout            <strike> <del>
+        Super Script        <sup>
+        Sub Script        <sub>
+
+FAQ: What is difference between <b> & <strong>?
+Ans :  <b> is used for design mode presentation.
+      <strong> is used for review mode marking.
+
+FAQ: What does  "<ins> & <del>" means?
+Ans:  "ins" refers to inserted content in review mode.
+      "del" refers to deleted content in review mode.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    The font style <b>Bold</b> is same as <strong>Strong</strong>. <br>
+    The style <i>Italic</i> is same as <em>Emphasized.</em> <br>
+    The effect <u>Underline</u> is same as <ins>Inserted</ins>. <br>
+    The effect <strike>Strikeout</strike> is same as <del>Deleted</del>. <br>
+    5<sup>th</sup> Anniversay <br>
+    H<sub>2</sub>O
+</body>
+</html>
+
+
+Ex: Flipkart Mobile
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+            column-gap: 20px;
+        }
+        .rating {
+            background-color: green;
+            color:white;
+            padding: 3px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            margin-left: -40px;
+        }
+        ul span {
+            color:black;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div>
+
+        </div>
+        <div>
+            <div>
+                <font size="5" face="Arial">Apple iPhone 15 (Black, 128 GB)</font>
+            </div>
+            <br>
+            <div>
+                <span class="rating"> 4.6 <span class="bi bi-star-fill"></span> </span>  <span> <b> <font size="4" face="Arial" color="gray"> 17,570 Ratings & 1,200 Reviews </font> </b> </span>
+            </div>
+            <br>
+            <div>
+                <font color="green" face="Arial"> Extra ₹4901 off</font>
+            </div>
+            <div>
+                <h1> <font face="Arial">&#8377; 72,999</font> <font size="5" face="Arial" color="gray"> &nbsp; <strike>79,999</strike> </font> &nbsp; <font color="green" face="Arial" size="4" > 8% Off </font> </h1>
+            </div>
+            <div>
+                <font size="4" face="Arial"><h3>Available Offers</h3></font>
+                <font size="4" face="Arial" color="green">
+                    <ul>
+                        <li class="bi bi-tag-fill"> <span>Bank OfferGet ₹25* instant discount for the 1st Flipkart Order using Flipkart UPIT&C</span> </li>
+                        <li class="bi bi-tag-fill"> <span>Bank Offer5% Cashback on Flipkart Axis Bank CardT&C</span> </li>
+                        <li class="bi bi-tag-fill"> <span>Bank Offer5% Cashback on Flipkart Axis Bank CardT&C</span> </li>
+                        <li class="bi bi-tag-fill"> <span>Bank Offer5% Cashback on Flipkart Axis Bank CardT&C</span> </li>
+                    </ul>
+                </font>
+            </div>
+        </div>
+   </div>
+</body>
+</html>
+
+                           Images in HTML
+- Images are of various types.
+- Web will not support all types of images.
+- The image types supported for web are shown below
+
+
+Image        Description                        MIME            Extention
+--------------------------------------------------------------------------------------------------------------------
+APNG        Animated Portable Network Graphics    image/apng        .apng
+
+PNG        Portable Network Graphics            image/png        .png
+
+JPEG        Joint Photographic Expert Group        image/jpeg        .jpg, .jpeg, .jfif
+
+GIF            Graphic Interchange Format            image/gif            .gif
+
+BMP            Bitmap                            image/bmp        .bmp
+
+TIFF            Tagged Image File Format            image/tiff            .tiff
+
+ICO            Microsoft Icon                        application/ico        .ico
+
+SVG            Scalar Vector Graphics                application/xml    .svg
+
+FAQ: What is MIME ?
+Ans:  MIME is "Multi purpose Internet Mail Extention".
+     A MIME type comprises of various extentions for a file.
+
+    Ex:     image/jpeg        .jpg, .jpeg, .jfif
+
+
+PNG & APNG
+- High Definition Images
+- More Pixel Depth
+- Occupy more memory
+- APNG can be animated.
+- Good for downloadable images.
+
+JPEG
+- HD
+- Less Pixel Depth when compared to PNG
+- Compressed Image Format
+- Less memory space
+- Good for on screen presentation.
+
+GIF
+- 256 color only
+- Not HD
+- Less Pixels
+- Memory same as JPG.
+- Good for logos, bullets, buttons etc.

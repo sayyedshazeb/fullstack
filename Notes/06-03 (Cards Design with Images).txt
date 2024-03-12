@@ -1,0 +1,299 @@
+Cards Design with Images
+
+- Image Element
+- Basic Attributes
+    src
+    alt
+    width/height
+    vspace/hspace
+    align
+    border
+    title
+- Advanced Attributes
+    crossorign
+    srcset
+    decode
+    importance
+
+1. crossorigin [CORS]
+ - Cross Origin Resource Sharing
+ - It is required when image is accessed from a remote server.
+ - If image is not in the local server where your app is hosted, then your have to use cross orign attribute to set restrictions.
+
+Syntax:
+    <img  crossorigin="allow-anonymous | use-credentials">
+
+Ex:
+<img width="300" height="300" crossorigin="use-credentials"  src="http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG&quot; >
+
+2. decoding
+- It defines how image loads along with other content in page.
+- It can have 3 values
+    a) auto
+    b) sync
+    c) async
+- Sync refers to synchronous loading, which block other content while loading image.
+- Async refers to asynchronous loading, which load image along with other content.
+- Auto changes according to state and situation
+
+Syntax:
+    <img  src="..path"  decoding="auto | sync | async">
+
+3. importance
+- It is used to set priority for image in page.
+- You can set importance as "low | high | auto"
+
+Syntax:
+    <img src="path"  importance="low | high | auto">
+
+4. srcset
+- It allows to configure a collection of images to display in one embedded <img> element.
+- It can rotate images according to state and situation.
+
+Syntax:
+    <img srcset="collection-of-images">
+
+Ex: Amazon Cards
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: -250px;
+            background-color: rgb(205, 229, 244);
+        }
+        .card {
+            background-color: white;
+            height: 400px;
+            padding: 5px;
+            margin: 10px;
+        }
+        .card-title {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            font-family: Arial;
+        }
+        .row img {
+            width: 100%;
+        }
+        .row div {
+            margin: 5px;
+        }
+        .footer-title {
+            font-family: Arial;
+            color:blue;
+        }
+        .card-footer {
+            padding: 5px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/amazon-banner.jpg" width="100%">
+    </header>
+    <section>
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">Revamp your home in style</span>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="images/a1.jpg">
+                        <p>Cushion covers, bedsheets & more</p>
+                    </div>
+                    <div>
+                        <img src="images/a2.jpg">
+                        <p>Figurines, vases and more</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="images/a3.jpg">
+                        <p>Home Storage</p>
+                    </div>
+                    <div>
+                        <img src="images/a4.jpg">
+                        <p>Lighting Solutions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="footer-title">Explore All</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">Appliances for your home | Up to 55% off</span>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="images/a5.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div>
+                        <img src="images/a6.jpg">
+                        <p>Refrigerators</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="images/a7.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div>
+                        <img src="images/a8.jpg">
+                        <p>Washing Machines</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="footer-title">See more</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">Up to 60% off | Styles for men</span>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="images/a9.jpg">
+                        <p>Clothing</p>
+                    </div>
+                    <div>
+                        <img src="images/a10.jpg">
+                        <p>Footwear</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="images/a11.jpg">
+                        <p>Watches</p>
+                    </div>
+                    <div>
+                        <img src="images/a12.jpg">
+                        <p>Bags & Belts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <br>
+                <span class="footer-title">End of Season Sale</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+
+            </div>
+            <div class="card-body">
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+CSS Position Absolute & Relative:
+
+Absolute:
+- It removes element from normal flow of document.
+- It can place element at any specified location "left, right, top or bottom".
+- It keeps the element with regard to content in page.
+
+Relative:
+- It is defined for parent element.
+- Parent can keep all its child element relative to the current context.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .badge {
+            display: inline-block;
+            font-size: 10px;
+            font-family: Arial;
+            background-color: red;
+            padding: 2px;
+            color:white;
+            border-radius: 10px;
+            width: 10px;
+            height: 10px;
+            text-align: center;
+            position: absolute;
+            top:-4px;
+            right: 0px;
+        }  
+        .bi-cart4 {
+            font-size: 30px;
+            width: 40px;
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="bi bi-cart4">
+        <span class="badge"> 2 </span>
+    </div>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+       .fashion {
+        background-image: url("images/women-fashion.jpg");
+        background-size: cover;
+        width: 300px;
+        height: 400px;
+        position: relative;
+       }
+       .sale {
+        background-color: red;
+        color:white;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        border-radius: 40px;
+        font-size: 14px;
+        padding: 10px;
+        position: absolute;
+        top: 90px;
+        right: 30px;
+       }
+    </style>
+</head>
+<body>
+    <div class="fashion">
+        <div class="sale">SALE <br> 40%</div>
+    </div>
+</body>
+</html>

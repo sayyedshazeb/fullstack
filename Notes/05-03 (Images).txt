@@ -1,0 +1,255 @@
+Images
+
+1. What are the type of Images supported for Web
+        apng, png
+        jpeg    
+        gif
+        tiff
+        ico
+        bmp
+        svg
+
+TIFF
+- It is a sliced image format.
+- It have HD and more pixels than PNG.
+- It is mostly used for scanned documents.
+
+BMP
+- It is bitmap.
+- Image is stored in binary format.
+- It is transfered in binary format.
+- If you want to store image in database the recommended to convert into binary.
+
+ICO
+- It refers to Microsoft ICON.
+- It is used for "favicon".
+
+SVG
+- It is not pixel based.
+- It is scalar graphics.
+- It is used for large architectural diagrams & icons
+- Scalar graphics keep the quality of image at various zoom levels.
+- It is XML based image. [Extensible Markup Language]
+Ex:
+    bootstrap-icons, google maps
+
+
+                         HTML Image  Element
+
+- You can embed image into webpage by using <img> token.
+
+Basic Attributes:
+1. src                :  It refers the image page. [Always use only virtual path]
+2. alt                :  It define alternative text to display when image fails to load.
+3. title                :  It is used to display screen tip as title, when mouse is over                            the image.
+4. width & height        :  It sets the dimensions for image in page.
+                       You can use "%" for fluid images.
+
+5. border                : It sets border for image.
+
+Syntax:
+  <img src="images/fashion.jpg"  alt="20% OFF on Fashion"  title="Offer on Fashion" width="50%" height="300">
+
+
+6. align                : It sets image alignment left or right. It is required for text
+                      wrapping.
+
+7. vspace & hspace    : Sets vertical and horizontal space between image and
+                      content around.
+
+Syntax:
+ <img src="images/fashion.jpg"  align="left" hspace="20" vspace="20">
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+            column-gap: 20px;
+        }
+        .rating {
+            background-color: green;
+            color:white;
+            padding: 3px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            margin-left: -40px;
+        }
+        ul span {
+            color:black;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div>
+            <img src="images/iphone-black.jpg" width="100%">
+        </div>
+        <div>
+            <div>
+                <font size="5" face="Arial">Apple iPhone 15 (Black, 128 GB)</font>
+            </div>
+            <br>
+            <div>
+                <span class="rating"> 4.6 <span class="bi bi-star-fill"></span> </span>  <span> <b> <font size="4" face="Arial" color="gray"> 17,570 Ratings & 1,200 Reviews </font> </b> </span>
+            </div>
+            <br>
+            <div>
+                <font color="green" face="Arial"> Extra ₹4901 off</font>
+            </div>
+            <div>
+                <h1> <font face="Arial">&#8377; 72,999</font> <font size="5" face="Arial" color="gray"> &nbsp; <strike>79,999</strike> </font> &nbsp; <font color="green" face="Arial" size="4" > 8% Off </font> </h1>
+            </div>
+            <div>
+                <font size="4" face="Arial"><h3>Available Offers</h3></font>
+                <font size="4" face="Arial" color="green">
+                    <ul>
+                        <li class="bi bi-tag-fill"> <span>Bank OfferGet ₹25* instant discount for the 1st Flipkart Order using Flipkart UPIT&C</span> </li>
+                        <li class="bi bi-tag-fill"> <span>Bank Offer5% Cashback on Flipkart Axis Bank CardT&C</span> </li>
+                        <li class="bi bi-tag-fill"> <span>Bank Offer5% Cashback on Flipkart Axis Bank CardT&C</span> </li>
+                        <li class="bi bi-tag-fill"> <span>Bank Offer5% Cashback on Flipkart Axis Bank CardT&C</span> </li>
+                    </ul>
+                </font>
+            </div>
+        </div>
+   </div>
+</body>
+</html>
+
+Ex:Inox Cards
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .card {
+            width: 200px;
+            padding: 5px;
+            margin: 20px;
+            border:1px solid gray;
+            box-shadow: 2px 2px 2px black;
+        }
+        .card-img {
+            width: 100%;
+        }
+        .card-body {
+            height: 80px;
+        }
+        .card-title {
+            font-family: Arial;
+            font-weight: bold;
+        }
+        .card-subtitle {
+            font-family: Arial;
+            color:gray;
+            font-size: 16px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .card-text {
+            font-family: Arial;
+            font-size: 16px;
+            color:gray;
+            font-weight: bold   ;
+        }
+        .card-footer {
+            height: 50px;
+        }
+        .btn-book {
+            display: inline-block;
+            background-color: rgb(4, 49, 172);
+            color:white;
+            font-family: Arial;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .bi-info-circle {
+            display: inline-block;
+            border:1px solid gray;
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+        main {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="card">
+            <div class="card-header">
+                <img src="images/a.avif" class="card-img">
+            </div>
+            <div class="card-body">
+               <div class="card-title"> SHAITAAN </div>
+               <div class="card-subtitle">U/A Thriller +1 more</div>
+               <div class="card-text">Hindi</div>
+            </div>
+            <div class="card-footer">
+                <span class="btn-book"> Book Tickets </span> <span class="bi bi-info-circle"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <img src="images/b.avif" class="card-img">
+            </div>
+            <div class="card-body">
+               <div class="card-title"> DUNE PART TWO </div>
+               <div class="card-subtitle">U/A Action</div>
+               <div class="card-text">Engilish</div>
+            </div>
+            <div class="card-footer">
+                <span class="btn-book"> Book Tickets </span> <span class="bi bi-info-circle"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <img src="images/c.avif" class="card-img">
+            </div>
+            <div class="card-body">
+               <div class="card-title"> OPERATION VALENTINE </div>
+               <div class="card-subtitle">U/A Action</div>
+               <div class="card-text">Telugu</div>
+            </div>
+            <div class="card-footer">
+                <span class="btn-book"> Book Tickets </span> <span class="bi bi-info-circle"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <img src="images/d.jpg" class="card-img">
+            </div>
+            <div class="card-body">
+               <div class="card-title"> ARTICLE 370 </div>
+               <div class="card-subtitle">U/A Drama</div>
+               <div class="card-text">Hindi</div>
+            </div>
+            <div class="card-footer">
+                <span class="btn-book"> Book Tickets </span> <span class="bi bi-info-circle"></span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

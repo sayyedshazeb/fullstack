@@ -1,0 +1,178 @@
+Inter Document Links
+
+Intra Document Links
+Inter Document Links
+- It refers to hyperlink that handle navigation outside the current page.
+- It can link
+    a) File
+    b) URL
+    c) Application
+    d) JavaScript Function
+- You can link any type of file with <a> element.
+- Every file can't open in browser, It requires additional plugin's.
+- If Plugin is not available then the linked document will download.
+
+Syntax:
+    <a href="./images/fashion.jpg">  Image </a>      => can open
+    <a href="./docs/tutorial.pdf"> PDF </a>              => can open in supported browser
+    <a href="./docs/content.xlsx"> Excel </a>           => will download
+
+FAQ: How to link a file that always downloads?
+Ans:  By using HTML <a> attribute "download"
+
+Syntax:
+    <a href="./images/fashion.jpg" download="MenFashion">  Fashion </a>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li> <a href="./shopper-template.html"> Shopper Template </a> </li>
+        <li> <a href="./images/women-fashion.jpg"> Women Fashion Image </a> </li>
+        <li> <a href="./images/men-fashion.jpg" download="FashionMen"> Men Fashion For Download </a> </li>
+        <li> <a href="./docs/ArrayProblems.pdf"> Arrays PDF Document </a> </li>
+        <li> <a href="./docs/UI_Course.xlsx"> UI Course Content Excel Document </a> </li>
+       
+    </ol>
+</body>
+</html>
+
+
+- You can link any URL, but make sure that URL have protocol, domain and correct path.
+
+Syntax:
+    <a href="https://www.amazon.in"&gt;  Amazon </a>
+
+- You can link various apps [ few supported apps ]
+
+    a) Email
+        <a href="some@gmail.com">  Text </a>
+    b) Telephone
+        <a href="tel:+919988321121"> +919988321121 </a>
+    c) Skype
+        <a href="skype:yourid@outlook.com">  Your Skype </a>
+   
+- You can link to any javascript function to execute the function on link click.
+
+Syntax:
+        <a href="javascript:functionName()">  Click </a>
+        <a href="javascript:window.print()">  Print </a>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <ol>
+        <li> You can send your queries to <a href="hr@nareshit.com"> hr@nareshit.com </a> </li>
+        <li> You can call us <a href="tel:+9199877632211">+9199877632211</a> </li>
+        <li> You Skype message or call <span class="bi bi-skype"></span> <a href="skype:nareshit@outlook.com"> NareshIT Skype </a>  </li>
+        <li> <a href="https://web.whatsapp.com/+9199877632211"&gt; Whatsapp +9199877632211</a> </li>
+        <li> <a class="bi bi-printer" href="javascript:window.print()"> Print Page</a> </li>
+    </ol>
+</body>
+</html>
+
+FAQ's:
+1. How to open linked document in a new tab?
+A. By using <a> "target" attribute set to "_blank".
+
+
+Syntax:
+    <a href="./images/fashion.jpg"  target="_blank">  Fashion </a>
+
+2. How to open linked document in a new window?
+A. By using Javascript "window.open()" method.
+
+Syntax:
+ <a href="javascript:window.open('path', 'title', 'features')">  Text </a>
+
+Ex:
+ <a href="javascript:window.open('./images/fashion.jpg', 'Fashion', 'width=300 height=400')">   Your Text  </a>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <ol>
+       <li> <a href="./images/women-fashion.jpg" target="_blank"> Women Fashion </a> </li>
+       <li> <a href="javascript:window.open('./images/kids-fashion.jpg','Kids','width=300 height=400')"> Kids Fashion </a> </li>
+    </ol>
+</body>
+</html>
+
+3. How to open liked document in the same tab along with existing content in document?
+A. You can embed any linked content in a document by using <iframe> element.
+     Iframe is a HTML element used to embed any document into page.
+
+Syntax:
+    <iframe src="somePath"  width="100" height="100" name="some"> </iframe>
+
+     The link "target" attribute must refer to  iframe name.
+
+Syntax:
+    <a href="somepath"  target="someFrameName">  Text </a>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            grid-gap: 50px;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border:none;
+        }
+        nav img {
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <nav>
+            <div><a href="./images/a9.jpg" target="frameBody"><img src="./images/a9.jpg" width="100" height="100"></a></div>
+            <div><a href="./images/a10.jpg" target="frameBody"><img src="./images/a10.jpg" width="100" height="100"></a></div>
+            <div><a href="./images/a11.jpg" target="frameBody"><img src="./images/a11.jpg" width="100" height="100"></a></div>
+            <div>
+                <a href="./docs/ArrayProblems.pdf" target="frameBody"> Arrays PDF </a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/embed/kiAK3FcwUYA&quot; target="frameBody"> React JS - YouTube </a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/embed/Skeuvyso84Q&quot; target="frameBody">Bootstrap</a>
+            </div>
+        </nav>
+        <main>
+            <iframe name="frameBody"></iframe>
+        </main>
+    </section>
+</body>
+</html>

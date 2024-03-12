@@ -1,0 +1,267 @@
+Tables in HTML
+
+Tables in HTML
+- Tables are used to design data grids.
+- A data grid comprises of data arranged in rows and columns.
+- HTML 5 table provides more semantics to keep your data SEO friendly.
+- Table elements are
+   
+        <table>                Table container
+        <caption>            Caption to make table SEO friendly
+        <thead>                Header section
+        <tbody>                Body section
+        <tfoot>                Footer section
+        <tr>                    Table Row
+        <th>                    Table heading Cell [header data]
+        <td>                    Table cell [normal] table data
+        <colgroup>            It is used to group a set of columns using "span"
+                            attribute.
+
+Syntax:
+    <table>
+        <caption> Caption for Table </caption>
+        <thead>
+             <tr>  <th> Header1 </th> <th>Header2 </th> </tr>
+        </thead>
+        <tbody>
+             <tr>  <td> Data1 </td>  <td> Data2 </td> </tr>
+        </tbody>
+        <tfoot>
+             <tr>   <td> Footer </td> </tr>
+        </tfoot>
+    </table>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table {
+            font-size: 20px;
+            font-family: Arial;
+        }
+        td img {
+            width: 30px;
+        }
+        tbody tr:first-child {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        td .bi-chevron-up {
+            font-size: 16px;
+        }
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <table width="100%" border="1">
+        <caption>Mens ICC Test Team Ratings</caption>
+        <thead>
+            <tr>
+                <th>Pos</th>
+                <th>Team</th>
+                <th>Matches</th>
+                <th>Pts</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01 <span class="bi bi-chevron-up">1</span> </td>
+                <td> <img src="images/india.jpg"> <span>INDIA</span> </td>
+                <td> 38 </td>
+                <td> 4636 </td>
+                <td> 122 </td>
+            </tr>
+            <tr>
+                <td>02 <span class="bi bi-chevron-down">1</span> </td>
+                <td> <img src="images/aus.jpg"> <span>AUSTRALIA</span> </td>
+                <td> 37 </td>
+                <td> 5443 </td>
+                <td> 111 </td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td> <img src="images/eng.jpg"> <span>ENGLAND</span> </td>
+                <td> 49 </td>
+                <td> 2939 </td>
+                <td> 109 </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Last Update March 2024</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+
+Table Attributes:
+
+1. Frame, Rules & Border
+
+     a) frame            : It sets a frame for table with values    
+                        - box, rhs, lhs, above, below & void
+   
+                      <table  frame="box | rhs | lhs ..">
+
+    b)  rules            : It is set of rows, columns and groups.
+
+                       <table  rules="all | rows | cols | groups | none">
+
+    c)  border            : It sets border for cell, it can have 2 values
+                        0         no-border [false]
+                        1        border [true]
+
+Note : You can't set border if rules attribute is defined for table. You have to remove
+        rules attribute in order to set border.
+
+
+
+2. Cellspacing & Cellpadding
+
+    a) cellspacing        : It sets space between cells.
+    b) cellpadding        : It sets space beween cell border and content inside
+
+Syntax:
+        <table  border="1"  frame="void" cellspacing="5" cellpadding="5">
+
+
+3. Width & Height
+
+    a) width            : It is set for <th> or <td>
+    b) height            : It is set for <tr>
+
+
+Syntax:
+     <th width="200">
+     <td  width="50">
+     <tr height="100">
+
+4. Align & Valign
+
+    a) align            : It sets alignment horizontally left, center, right, justify
+    b) valign            : It set vertical alignment top, center, bottom.
+
+Note: Define for <td> or <tr>. You can't manipulate columns in table.
+
+Syntax:
+    <tr align="center">
+    <td align="center">
+    <tr valign="top">
+    <td valign="bottom">
+
+5. BgColor & Background
+
+    a) bgcolor        : It sets background color for table, row, group, cell.
+    b) background        : It sets background image for table, row, group, cell.
+
+Syntax:
+    <table bgcolor="red">
+    <table background="pic.jpg">
+    <tr ... >
+    <td ...>
+
+6. Rowspan & Colspan
+
+    a) colspan            : It can merge multiple cells into one column.
+
+    b) rowspan            : It can merge multiple cells into one row
+
+Note :You can apply row & col span only for <td> or <th>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table {
+            font-size: 20px;
+            font-family: Arial;
+        }
+        td img {
+            width: 30px;
+        }
+        tbody tr:first-child {
+            font-size: 30px;
+            font-weight: bold;
+            color:white;
+        }
+        td .bi-chevron-up {
+            font-size: 16px;
+        }
+        td .bi-chevron-down {
+            font-size: 16px;
+        }
+        caption {
+            margin-bottom: 20px;
+            text-align: left;
+            color:gray;
+            font-weight: bold;
+        }
+        thead {
+            background-color: rgb(103, 103, 103);
+            color:white;
+        }
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <table  width="80%" cellspacing="0" cellpadding="10">
+        <caption>Mens ICC Test Team Ratings</caption>
+        <colgroup span="4"></colgroup>
+        <thead>
+            <tr>
+                <th width="100">Pos</th>
+                <th width="200">Team</th>
+                <th width="50">Matches</th>
+                <th width="100">Pts</th>
+                <th width="50">Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr height="100" bgcolor="#007" valign="center">
+                <td align="center">01 <span class="bi bi-chevron-up">1</span> </td>
+                <td> <img src="images/india.jpg"> <span>INDIA</span> </td>
+                <td> 38 </td>
+                <td> 4636 </td>
+                <td> 122 </td>
+            </tr>
+            <tr bgcolor="#FFCC00">
+                <td align="center">02 <span class="bi bi-chevron-down">1</span> </td>
+                <td> <img src="images/aus.jpg"> <span>AUSTRALIA</span> </td>
+                <td> 37 </td>
+                <td> 5443 </td>
+                <td> 111 </td>
+            </tr>
+            <tr>
+                <td align="center">03 <span class="bi bi-chevron-down">3</span> </td>
+                <td> <img src="images/eng.jpg"> <span>ENGLAND</span> </td>
+                <td> 49 </td>
+                <td> 2939 </td>
+                <td> 109 </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" bgcolor="lightgray">Last Update March 2024</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

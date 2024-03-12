@@ -1,0 +1,256 @@
+Iframes 
+
+Hyperlinks
+a) Intra Document
+b) Inter Document
+
+                                 IFrame
+- Iframe is available from HTML 5 version.
+- It is used to embed any page or URL content into existing page.
+- HTML 4 uses <frameset> with <frame> element.
+
+Frameset of HTML 4:
+- It splits the window into vertical and horizontal panes.
+- In every frame you can display a document.
+- You can also use frame as target for any hyperlink.
+- A page with frameset can't have  "<body>" section.
+
+Syntax:
+<html>
+  <head> <title> Frame </title> </head>
+  <frameset  cols="20%, 60%, 20%"  noresize>
+     <frame src=""> </frame>
+     <frame src="home.html"> </frame>
+     <frame src=""> </frame>
+  </frameset>
+</html>
+
+IFrame in HTML 5:
+- It allows to embed any external content along with other contents in page.
+- You can embed HTML Page, Video, Audio, Games, PPT, etc like content.
+
+Syntax:
+    <iframe src=""   name=""   width=""   height="">  </iframe>
+
+
+        slideshare.com            // ppts
+        scribd.com                // pdf, ppts, videos etc..
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            grid-gap: 50px;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border:none;
+        }
+        nav img {
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <nav>
+            <div><a href="./images/a9.jpg" target="frameBody"><img src="./images/a9.jpg" width="100" height="100"></a></div>
+            <div><a href="./images/a10.jpg" target="frameBody"><img src="./images/a10.jpg" width="100" height="100"></a></div>
+            <div><a href="./images/a11.jpg" target="frameBody"><img src="./images/a11.jpg" width="100" height="100"></a></div>
+            <div>
+                <a href="./docs/ArrayProblems.pdf" target="frameBody"> Arrays PDF </a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/embed/kiAK3FcwUYA&quot; target="frameBody"> React JS - YouTube </a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/embed/Skeuvyso84Q&quot; target="frameBody">Bootstrap</a>
+            </div>
+        </nav>
+        <main>
+            <iframe name="frameBody"></iframe>
+        </main>
+    </section>
+</body>
+</html>
+
+Ex: Youtube Channel Design
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube | NareshIT</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+        }
+        .logo {
+            width: 60%;
+        }
+        .bi-justify {
+            font-size: 30px;
+        }
+        .search-bar {
+            display: inline-block;
+            width: 400px;
+            border:1px solid gray;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: right;
+            margin-right: 20px;
+        }
+        .bi-mic-fill {
+            font-size: 20px;
+        }
+        .short-cuts span {
+            font-size: 25px;
+            margin-right: 20px;
+        }
+        .profile-logo {
+            border-radius: 30px;
+            width: 30px;
+            height: 30px;
+        }
+        section {
+            display: grid;
+            grid-template-columns: 1fr 11fr;
+            grid-gap: 30px;
+        }
+        nav div {
+            font-size: 25px;
+            margin-bottom: 50px;
+        }
+        nav {
+            margin-top: 40px;
+            padding: 5px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        article {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            margin-top: 20px;
+            font-family: Arial;
+        }
+        .article-title {
+            font-size: 40px;
+            font-weight: bold;
+        }  
+        article div {
+            margin-bottom: 10px;
+        }
+        .subscribe {
+            margin-top: 15px;
+            background-color: lightgray;
+            padding: 10px;
+            border-radius: 10px;
+            width: 130px;
+            font-weight: bold;
+        }
+        .menu {
+            font-size: 20px;
+            font-family: Arial;
+            border-bottom: 1px solid gray;
+            padding-bottom: 20px;
+        }
+        .menu span {
+            margin-right: 35px;
+        }
+        .videos {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="bi bi-justify"></span>
+            <img src="images/youtube-logo.jpg" class="logo" align="right">
+        </div>
+        <div>
+            <span class="search-bar">
+                <span class="bi bi-search"></span>
+            </span>
+            <span class="bi bi-mic-fill"></span>
+        </div>
+        <div class="short-cuts">
+            <span class="bi bi-camera-video"></span>
+            <span class="bi bi-bell"></span>
+            <img src="images/a9.jpg" class="profile-logo" width="20" height="20">
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div class="bi bi-house"></div>
+            <div class="bi bi-camera-video-fill"></div>
+            <div class="bi bi-film"></div>
+            <div class="bi bi-bell-fill"></div>
+        </nav>
+        <main>
+            <img src="images/youtube-banner.jpg" width="100%">
+            <article>
+                <div>
+                    <img src="images/nit-logo.jpg" width="100%">
+                </div>
+                <div>
+                    <div class="article-title">Naresh i Technologies</div>
+                    <div>@NareshIT</div>
+                   <div>1.24M subscribers</div>
+                   <div>2.9K videos</div>
+                    <div>We are one of the software training organization With a library of 200+ courses, </div>
+                    <div class="subscribe">
+                        <span class="bi bi-bell-fill"></span>
+                        <span> Subscribed </span>
+                        <span class="bi bi-chevron-down"></span>
+                    </div>
+                </div>
+            </article>
+            <div class="menu">
+                <span>Home</span>
+                <span>Videos</span>
+                <span>Shorts</span>
+                <span>Live</span>
+                <span>Playlists</span>
+                <span>Community</span>
+                <span class="bi bi-search"></span>
+            </div>
+            <div class="videos">
+                <iframe src="https://www.youtube.com/embed/kiAK3FcwUYA"></iframe&gt;
+                <iframe src="https://www.youtube.com/embed/tm7kVn8abSg"></iframe&gt;
+                <iframe src="https://www.youtube.com/embed/tm7kVn8abSg"></iframe&gt;
+                <iframe src="https://www.youtube.com/embed/tm7kVn8abSg"></iframe&gt;
+            </div>
+            <div class="videos">
+                <iframe src="https://www.youtube.com/embed/kiAK3FcwUYA"></iframe&gt;
+                <iframe src="https://www.youtube.com/embed/tm7kVn8abSg"></iframe&gt;
+                <iframe src="https://www.youtube.com/embed/tm7kVn8abSg"></iframe&gt;
+                <iframe src="https://www.youtube.com/embed/tm7kVn8abSg"></iframe&gt;
+            </div>
+            <div class="videos">
+                <iframe src="https://www.youtube.com/embed/kiAK3FcwUYA"></iframe&gt;
+                <iframe src="https://www.youtube.com/embed/tm7kVn8abSg"></iframe&gt;
+                <iframe src="https://www.youtube.com/embed/tm7kVn8abSg"></iframe&gt;
+                <iframe src="https://www.youtube.com/embed/tm7kVn8abSg"></iframe&gt;
+            </div>
+        </main>
+       
+    </section>
+</body>
+</html>

@@ -1,0 +1,328 @@
+Hyperlinks
+
+- Hyperlink is clickable text, picture or graphic that navigates the user to any specific location.
+- Hyperlinks are created using anchor <a> element.
+- Hyperlinks are classified into 2 types
+
+    a) Intra Document Links
+    b) Inter Document Links
+
+Intra Document Links:
+- They refer to hyperlink that navigates used from one location to another within the same page.
+- The target location must have a reference "id". [unique identification]
+- Anchor will refer the "id" using  "href" attribute.
+- "Id" is accessible with "#" reference name.
+
+Syntax:
+        <h1  id="html">  HTML </h1>
+        <img id="pic" src="path">
+
+
+        <a href="#html"> HTML </a>
+        <a href="#pic"> Image </a>
+
+FAQ: What is difference between "href" & "src" ?
+Ans:  "href" is a setter. It is not accessing the path, it is setting the path for request.
+     "src" is a getter. It is accessing the path, not setting the path.
+
+Note: Getter and Setter are known as accessors in computer programming languages.
+      Getter is used to read a value.
+      Setter is used to assign a value.
+
+FAQ: How to remove underline for hyperlink?
+Ans:  By using css attribute  "text-decoration" set to "none".
+
+    a {
+         text-decoration:none;
+     }
+
+FAQ: How to set color for visited and active links?
+Ans:  By using HTML <body> attributes
+        a) alink
+        b) vlink
+     By using CSS classes
+        a) active
+        b) visited
+
+Syntax:
+    <body alink="red" vlink="gray">
+
+    a:visited {
+       color:gray;
+    }
+    a:active {
+       color:red;
+    }
+
+                             Figure & Figcaption
+
+- These are the semantics used to keep images SEO friendly.
+- Web Spiders can find your image by using the caption defined for image.
+
+Syntax:
+    <figure>
+        ... your image....
+        <figcaption> Fig-1.0</figcaption>
+    </figure>
+
+Ex: Intra-links.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            font-family: Arial;
+            background-color: black;
+            color:white;
+            font-size: 20px;
+        }
+        .brand-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        nav span {
+            margin-right: 20px;
+        }
+        section {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+        main {
+            height: 450px;
+            overflow: auto;
+        }
+        ul {
+            list-style: none;
+            margin-left: -30px;
+        }
+        li {
+            font-family: Arial;
+            margin-bottom: 20px;
+            background-color: black;
+            color:white;
+            width: 140px;
+            border-radius: 5px;
+            padding: 5px;
+
+        }
+        li:hover {
+            background-color: maroon;
+            color:black;
+        }
+        nav a {
+            text-decoration: none;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-title">Shopper.</div>
+        <nav>
+            <span><a href="#home">Home</a></span>
+            <span>Fashion</span>
+            <span>Electronics</span>
+            <span>Contact</span>
+        </nav>
+        <div>
+            <span>Signin</span>
+        </div>
+    </header>
+    <section>
+        <nav>
+          <ul>
+            <li> <a href="#home">Home</a> </li>
+            <li> <a href="#men">Mens' Fashion</a> </li>
+            <li> <a href="#kid">Kid's Fashion</a></li>
+            <li> <a href="#women">Women's Fashion</a> </li>
+          </ul>
+        </nav>
+        <main>
+            <h1 id="home">Home</h1>
+            <p>Lorem ipsum dolor, <span><b>Special Offer 30% OFF on <a href="#iphone">iPhone 15x</a> </b></span> sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <h1 id="women">Women's Fashion</h1>
+            <img src="images/women-fashion.jpg" width="200" height="300">
+            <div>
+                <a href="#home">Back to Top</a>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <h1 id="men">Men's Fashion</h1>
+            <img src="images/men-fashion.jpg" width="200" height="300">
+            <div>
+                <a href="#home">Back to Top</a>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <figure id="iphone">
+                <img src="images/iphone-black.jpg" width="100" height="200">
+                <figcaption>iPhone 15 Pro</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <h1 id="kid">Kids's Fashion</h1>
+            <img src="images/kids-fashion.jpg" width="200" height="300">
+            <div>
+                <a href="#home">Back to Top</a>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora maxime, omnis in a consequuntur harum autem pariatur quaerat nisi fuga dolore velit officia et quibusdam. Voluptates quaerat similique vero.</p>
+        </main>
+    </section>
+</body>
+</html>
+
+FAQ: How do you highlight an intra document link when content is not scrollable?
+Ans: We can highlight by using CSS "target" class. It identifies the container, which is
+     target of selected link and highlights with CSS effects.
+
+Syntax:
+    .card {
+         // effects in normal state;
+    }
+    .card:target {
+            // effects when it is target of link
+    }
+
+    <div class="card" id="html">
+
+    <a href="#html"> HTML </a>
+
+Ex: Intra-link-without-scroll.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 200px;
+            padding: 20px;
+            border:1px solid black;
+            box-shadow: 2px 2px 2px gray;
+            margin: 20px;
+        }
+        .card:target {
+            background-color: black;
+            color:white;
+            border-radius: 100px;
+        }
+        main {
+            display: flex;
+            margin-top: 50px;
+        }
+        nav span {
+            font-family: Arial;
+            font-size: 20px;
+            margin-right: 50px;
+        }
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <span><a href="#html">HTML</a></span>
+        <span><a href="#css">CSS</a></span>
+        <span><a href="#js">JavaScript</a></span>
+    </nav>
+    <main>
+        <div class="card" id="html">
+            <h1>HTML</h1>
+            <ul>
+                <li>Normal Elements</li>
+                <li>Void Elements</li>
+                <li>RC Data</li>
+                <li>Raw Text</li>
+            </ul>
+        </div>
+        <div class="card" id="css">
+            <h1>CSS</h1>
+            <ul>
+                <li>Selectors</li>
+                <li>Inheritance</li>
+                <li>Units</li>
+                <li>Transforms</li>
+            </ul>
+        </div>
+        <div class="card" id="js">
+            <h1>JavaScript</h1>
+            <ul>
+                <li>Variables</li>
+                <li>Data Types</li>
+                <li>Operators</li>
+                <li>Statements</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav, main {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .pic {
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+        }
+        .pic:target {
+            width: 300px;
+            height: 300px;
+            border-radius: 300px;
+            transition: 4s;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <span><a href="#kids">Kids</a></span>
+        <span><a href="#women">Women</a></span>
+        <span><a href="#men">Men</a></span>
+    </nav>
+    <main>
+        <img src="images/kids-fashion.jpg" id="kids" class="pic">
+        <img src="images/women-fashion.jpg" id="women" class="pic">
+        <img src="images/men-fashion.jpg" id="men" class="pic">
+    </main>
+</body>
+</html>
