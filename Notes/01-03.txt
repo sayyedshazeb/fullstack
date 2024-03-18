@@ -1,4 +1,4 @@
-Summary
+Summary.
 - heading
 - paragraph
 - blockquote
