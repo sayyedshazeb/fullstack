@@ -1,3 +1,5 @@
+Currently in this lecture
+
 Ordered & Unordered List
 
 - Ordered list sets auto numbering for a list of items.
